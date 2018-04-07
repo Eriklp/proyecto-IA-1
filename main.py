@@ -45,6 +45,7 @@ def main():
 			if event.type == QUIT:
 				pygame.quit()
 				sys.exit()
+		cursor1.update()
 		pygame.display.update()
 
 main()
