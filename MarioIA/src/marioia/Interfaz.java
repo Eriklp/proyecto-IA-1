@@ -155,9 +155,13 @@ public class Interfaz extends javax.swing.JFrame {
                 File fichero = fileChooser.getSelectedFile();
                 lector = new FileReader(fichero);
                 BufferedReader br = new BufferedReader(lector);
+                String texto = br.readLine();
+                System.out.print(texto);
                         // Aquí debemos abrir el fichero para escritura
                         // y salvar nuestros datos.
             } catch (FileNotFoundException ex) {
+                Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IOException ex) {
                 Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
             } finally {
                 try {
